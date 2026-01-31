@@ -3848,10 +3848,10 @@ figcaption {
   padding: var(--components--buttons--paddings--pd-regular) var(--components--buttons--paddings--pd-medium);
   grid-column-gap: var(--components--buttons--gaps--gap-small);
   grid-row-gap: var(--components--buttons--gaps--gap-small);
-  border: var(--components--buttons--border-width--bw-default) solid var(--components--badge-tertiary--border-color--bg-dark);
+  border: 0;
   border-radius: var(--core--border-radius--br-pill);
   background-color: var(--components--buttons-primary--backgrounds--bg-light-mode);
-  box-shadow: 0 4px 8px 0 var(--core--box-shadow--bs-primary-regular);
+  box-shadow: none;
   color: var(--components--buttons-primary--text--text-light-mode);
   font-size: var(--core--font-size--displays--display-2);
   line-height: var(--core--line-height--regular);
@@ -8185,7 +8185,6 @@ figcaption {
 
 .nav-menu-hidden-on-mobile {
   color: var(--core--colors--primary--400);
-  border: 1px solid #7a6054;
 }
 
 .gap-32px {
