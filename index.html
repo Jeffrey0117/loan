@@ -101,20 +101,7 @@
           <div data-w-id="460078fa-3dbc-4dd4-2980-a389286e1fc5" class="w-layout-grid grid-2-columns hero-v1-grid">
             <div id="w-node-_460078fa-3dbc-4dd4-2980-a389286e1fc6-1b485fc7" class="inner-container _540px">
               <h1 class="display-11 text-light">最適合客戶的財務解決方案</h1>
-              <div class="mg-top-small">
-                <div class="flex-vertical align-start">
-                  <div class="mg-top-large width-100-mobile-portrait">
-                    <div class="buttons-row left">
-                      <a id="w-node-e9da5fd6-ab44-5b2f-81ad-6e5f36bfab9c-36bfab9c" href="#contact" class="primary-button w-inline-block">
-                        <div>聯絡我們</div>
-                        <div class="item-icon-right">
-                          <div class="base-icon-font"></div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
             </div>
           </div>
           <!-- Image Carousel -->
@@ -663,38 +650,201 @@
       background: rgba(255, 255, 255, 0.8);
     }
 
+    /* Contact form base RWD */
+    .section-2 {
+      padding-bottom: 40px;
+    }
+
+    .section-2 .w-container {
+      max-width: 680px;
+    }
+
+    .section-2 .submit-button {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* Tablet Responsive */
+    @media (max-width: 991px) {
+      .section-2 {
+        padding: 32px 24px 40px;
+      }
+
+      .section-2 .w-container {
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
     /* Mobile Responsive */
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
+      /* Hero: let grid use full width */
+      .grid-2-columns.hero-v1-grid {
+        max-width: 100% !important;
+      }
+
+      /* Hero: full-bleed image on mobile */
+      .section.hero.pd-0px {
+        padding: 0 !important;
+      }
+
+      .section.hero .container-default {
+        max-width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      .content-full-image-wrapper.hero-v1 {
+        padding: 0 !important;
+        min-height: auto !important;
+        border-radius: 0 !important;
+      }
+
+      /* Hide text overlay, show image only */
+      .grid-2-columns.hero-v1-grid {
+        display: none !important;
+      }
+
+      /* Carousel: full-width, aspect ratio based */
+      .image-wrapper.full-image-section.carousel-container {
+        position: relative !important;
+        inset: auto !important;
+        width: 100%;
+      }
+
+      .carousel-container,
+      .carousel-wrapper {
+        min-height: auto !important;
+        aspect-ratio: 16 / 9;
+      }
+
+      .carousel-wrapper {
+        position: absolute;
+        inset: 0;
+      }
+
+      .carousel-slide img {
+        object-fit: cover !important;
+      }
+
+      /* Hide carousel arrows, keep dots */
       .carousel-arrow {
-        width: 40px;
-        height: 40px;
-        font-size: 30px;
+        display: none !important;
       }
 
-      .carousel-prev {
-        left: 10px;
+      .carousel-dots {
+        bottom: 8px;
+        gap: 8px;
       }
 
-      .carousel-next {
-        right: 10px;
+      .carousel-dot { width: 8px; height: 8px; }
+      .carousel-dot.active { width: 20px; }
+
+      /* Marquee: compact */
+      .text-slider-wrapper {
+        padding-top: 4px !important;
+        padding-bottom: 4px !important;
       }
 
-      .announcement-slide {
-        font-size: 13px;
+      .display-4.strong.text-titles {
+        font-size: 12px !important;
       }
 
-      .announcement-arrow {
-        padding: 0 6px;
-        font-size: 20px;
+      /* Contact form: full width on mobile */
+      .section-2 {
+        padding: 24px 16px !important;
       }
 
-      .announcement-slides {
-        width: 240px;
+      .section-2 .w-container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
       }
+
+      .section-2 .heading {
+        font-size: 28px !important;
+        margin-bottom: 8px;
+      }
+
+      .section-2 .paragraph {
+        font-size: 14px !important;
+        padding-bottom: 12px;
+      }
+
+      .section-2 .w-input,
+      .section-2 .textarea {
+        width: 100% !important;
+        box-sizing: border-box;
+        font-size: 16px !important;
+      }
+
+      .section-2 .submit-button {
+        width: 100%;
+        padding: 14px !important;
+        font-size: 16px !important;
+      }
+
+      .section-2 .text-block-2 {
+        font-size: 12px;
+      }
+
+      /* Announcement bar */
+      .announcement-slide { font-size: 13px; }
+      .announcement-arrow { padding: 0 6px; font-size: 20px; }
+      .announcement-slides { width: 240px; }
+
+      /* Footer */
       .sf-inner { padding: 12px 20px 10px; }
       .sf-top { flex-direction: column; gap: 12px; align-items: flex-start; }
       .sf-links { gap: 16px; flex-wrap: wrap; }
       .sf-bottom { flex-direction: column; gap: 4px; }
+    }
+
+    /* Small Mobile */
+    @media (max-width: 479px) {
+      .announcement-slides { width: 200px; }
+
+      .section-2 {
+        padding: 20px 12px 32px !important;
+      }
+
+      .section-2 .heading {
+        font-size: 24px !important;
+      }
+
+      .section-2 .paragraph {
+        font-size: 13px !important;
+      }
+
+      .section-2 label {
+        font-size: 14px;
+      }
+    }
+
+    /* Remove gray background behind marquee */
+    .hero-pd-0px-bg-bottom {
+      display: none !important;
+    }
+
+    .text-slider-wrapper {
+      padding-top: 8px !important;
+      padding-bottom: 8px !important;
+      background-color: whitesmoke;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* CSS marquee animation (Webflow IX2 not active) */
+    @keyframes marquee-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .flex-horizontal.logo-strip.v11 {
+      animation: marquee-scroll 20s linear infinite;
+      will-change: transform;
     }
 
     /* Footer */
